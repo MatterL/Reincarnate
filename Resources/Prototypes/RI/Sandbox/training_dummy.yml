@@ -1,0 +1,11 @@
+﻿- type: entity
+  id: RiSandboxTrainingDummy
+  name: RI sandbox training dummy
+  description: A networked learning dummy for Phase 02. The server owns its hit counter.
+  components:
+    - type: Sprite
+      texture: /Textures/noSprite.png
+    - type: TrainingDummy
+      displayName: Sandbox Training Dummy
+      hits: 0
+      maxHits: 999999
