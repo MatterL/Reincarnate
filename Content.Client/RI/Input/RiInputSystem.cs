@@ -1,15 +1,17 @@
-﻿using Content.Shared.RI.Movement;
+﻿using System.Linq;
+using System.Numerics;
+using Content.Shared.RI.Movement;
 using Robust.Client.Input;
 using Robust.Shared.GameObjects;
-using Robust.Shared.Input.Binding;
-using Robust.Shared.Maths;
+using Robust.Shared.Input;
+using Robust.Shared.IoC;
 
 namespace Content.Client.RI.Input;
 
 /// <summary>
 /// Phase 07 client input bridge.
 /// Reads the existing engine MoveUp/MoveDown/MoveLeft/MoveRight binds and sends
-/// intent to the server.
+/// movement intent to the server.
 /// </summary>
 public sealed partial class RiInputSystem : EntitySystem
 {
@@ -27,9 +29,10 @@ public sealed partial class RiInputSystem : EntitySystem
         _sendAccumulator += frameTime;
 
         var direction = GetMovementDirection();
+        var unchanged = Vector2.DistanceSquared(direction, _lastDirection) < 0.0001f;
 
         // Send immediately on changes, and also resend at a low rate while held.
-        if (direction.EqualsApprox(_lastDirection) && _sendAccumulator < SendInterval)
+        if (unchanged && _sendAccumulator < SendInterval)
             return;
 
         _lastDirection = direction;
@@ -42,21 +45,26 @@ public sealed partial class RiInputSystem : EntitySystem
     {
         var direction = Vector2.Zero;
 
-        if (_input.CmdStates.GetState(EngineKeyFunctions.MoveUp) == BoundKeyState.Down)
+        if (IsDown(EngineKeyFunctions.MoveUp))
             direction.Y += 1;
 
-        if (_input.CmdStates.GetState(EngineKeyFunctions.MoveDown) == BoundKeyState.Down)
+        if (IsDown(EngineKeyFunctions.MoveDown))
             direction.Y -= 1;
 
-        if (_input.CmdStates.GetState(EngineKeyFunctions.MoveRight) == BoundKeyState.Down)
+        if (IsDown(EngineKeyFunctions.MoveRight))
             direction.X += 1;
 
-        if (_input.CmdStates.GetState(EngineKeyFunctions.MoveLeft) == BoundKeyState.Down)
+        if (IsDown(EngineKeyFunctions.MoveLeft))
             direction.X -= 1;
 
         if (direction.LengthSquared() > 1.0f)
-            direction = direction.Normalized();
+            direction = Vector2.Normalize(direction);
 
         return direction;
+    }
+
+    private bool IsDown(BoundKeyFunction function)
+    {
+        return _input.DownKeyFunctions.Contains(function);
     }
 }

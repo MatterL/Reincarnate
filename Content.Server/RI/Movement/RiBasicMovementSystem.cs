@@ -1,7 +1,8 @@
-﻿using Content.Shared.RI.Movement;
+﻿using System.Numerics;
+using Content.Shared.RI.Movement;
 using Robust.Shared.GameObjects;
 using Robust.Shared.IoC;
-using Robust.Shared.Maths;
+using Robust.Shared.Map;
 using Robust.Shared.Player;
 
 namespace Content.Server.RI.Movement;
@@ -18,6 +19,7 @@ public sealed partial class RiBasicMovementSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
+
         SubscribeNetworkEvent<RiMoveInputEvent>(OnMoveInput);
     }
 
@@ -35,14 +37,14 @@ public sealed partial class RiBasicMovementSystem : EntitySystem
         var direction = ev.Direction;
 
         // Reject bad input. Client sends intent, not truth.
-        if (!direction.X.IsFinite() || !direction.Y.IsFinite())
+        if (!float.IsFinite(direction.X) || !float.IsFinite(direction.Y))
         {
             movement.CurrentInput = Vector2.Zero;
             return;
         }
 
         if (direction.LengthSquared() > 1.0f)
-            direction = direction.Normalized();
+            direction = Vector2.Normalize(direction);
 
         movement.CurrentInput = direction;
     }
@@ -58,9 +60,9 @@ public sealed partial class RiBasicMovementSystem : EntitySystem
                 continue;
 
             var delta = movement.CurrentInput * movement.WalkSpeed * frameTime;
-            var next = xform.WorldPosition + delta;
+            var next = new EntityCoordinates(xform.ParentUid, xform.LocalPosition + delta);
 
-            _transform.SetWorldPosition(uid, next);
+            _transform.SetCoordinates(uid, xform, next);
         }
     }
 }
