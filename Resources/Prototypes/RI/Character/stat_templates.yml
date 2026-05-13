@@ -1,0 +1,169 @@
+﻿- type: riStatTemplate
+  id: Human
+  sourceRaceId: Human
+  sourceClassId: null
+  baseAffinities:
+    EnergyCapacity: 1.5
+    Strength: 1
+    Endurance: 1
+    Speed: 1
+    Force: 1
+    Resistance: 1
+    Offense: 1
+    Defense: 1
+    Regeneration: 0.5
+    Recovery: 3
+    Anger: 0.5
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+
+- type: riStatTemplate
+  id: Human.Sage
+  sourceRaceId: Human
+  sourceClassId: Human.Sage
+  baseAffinities:
+    EnergyCapacity: 1.75
+    Strength: 1.5
+    Endurance: 1.25
+    Speed: 1.2
+    Force: 1.2
+    Resistance: 1.2
+    Offense: 1.3
+    Defense: 1.3
+    Regeneration: 0.75
+    Recovery: 2
+    Anger: 0.25
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+
+- type: riStatTemplate
+  id: Alien.Fighter
+  sourceRaceId: Alien
+  sourceClassId: Alien.Fighter
+  baseAffinities:
+    EnergyCapacity: 0.5
+    Strength: 0.5
+    Endurance: 0.5
+    Speed: 0.5
+    Force: 0.5
+    Resistance: 0.5
+    Offense: 0.5
+    Defense: 0.5
+    Regeneration: 0.5
+    Recovery: 2
+    Anger: 0.4
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riStatTemplate
+  id: Alien.Healer
+  sourceRaceId: Alien
+  sourceClassId: Alien.Healer
+  baseAffinities:
+    EnergyCapacity: 0.5
+    Strength: 0.5
+    Endurance: 0.5
+    Speed: 0.5
+    Force: 0.5
+    Resistance: 0.5
+    Offense: 0.5
+    Defense: 0.5
+    Regeneration: 0.5
+    Recovery: 0.3
+    Anger: 0.4
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riStatTemplate
+  id: Alien.Technologist
+  sourceRaceId: Alien
+  sourceClassId: Alien.Technologist
+  baseAffinities:
+    EnergyCapacity: 0.5
+    Strength: 0.5
+    Endurance: 1.5
+    Speed: 0.5
+    Force: 0.5
+    Resistance: 1.5
+    Offense: 0.5
+    Defense: 1.5
+    Regeneration: 0.5
+    Recovery: 0.3
+    Anger: 0.4
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riStatTemplate
+  id: Alien.Wizard
+  sourceRaceId: Alien
+  sourceClassId: Alien.Wizard
+  baseAffinities:
+    EnergyCapacity: 2
+    Strength: 0.75
+    Endurance: 0.75
+    Speed: 0.25
+    Force: 0.25
+    Resistance: 0.25
+    Offense: 0.25
+    Defense: 0.25
+    Regeneration: 0.5
+    Recovery: 1
+    Anger: 0.5
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riStatTemplate
+  id: Saiyan
+  sourceRaceId: Saiyan
+  sourceClassId: null
+  baseAffinities:
+    EnergyCapacity: 1.5
+    Strength: 2
+    Endurance: 2
+    Speed: 1.25
+    Force: 1.5
+    Resistance: 1
+    Offense: 1.5
+    Defense: 1.5
+    Regeneration: 0.5
+    Recovery: 2
+    Anger: 0.5
+  audit:
+    status: NeedsSourceConfirmation
+    sourcePaths:
+      - Code/Races/Saiyan.dm
+      - Code/__core/race_stats.dm
+    notes: Seeded from the existing extracted Saiyan-like branch pattern. Verify against current registry before final balance lock.
+
+- type: riStatTemplate
+  id: Changeling.Fighter
+  sourceRaceId: Changeling
+  sourceClassId: Changeling.Fighter
+  baseAffinities:
+    EnergyCapacity: 0.4
+    Strength: 2.75
+    Endurance: 4.5
+    Speed: 1.1
+    Force: 0.75
+    Resistance: 4.5
+    Offense: 0.25
+    Defense: 0.25
+    Regeneration: 0.75
+    Recovery: 1
+    Anger: 0.15
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Changeling.dm

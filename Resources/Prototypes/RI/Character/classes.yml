@@ -1,0 +1,283 @@
+﻿- type: riClass
+  id: Human.Fighter
+  displayName: Fighter
+  sourceClassName: Fighter
+  allowedRaceIds:
+    - Human
+  statProfileMode: Base
+  statTemplate: Human
+  progressionOverlay: Human.Fighter
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - HumanClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+
+- type: riClass
+  id: Human.Technologist
+  displayName: Technologist
+  sourceClassName: Technologist
+  allowedRaceIds:
+    - Human
+  statProfileMode: Base
+  statTemplate: Human
+  progressionOverlay: Human.Technologist
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - HumanClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+
+- type: riClass
+  id: Human.Healer
+  displayName: Healer
+  sourceClassName: Healer
+  allowedRaceIds:
+    - Human
+  statProfileMode: Base
+  statTemplate: Human
+  progressionOverlay: Human.Healer
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - HumanClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+
+- type: riClass
+  id: Human.Wizard
+  displayName: Wizard
+  sourceClassName: Wizard
+  allowedRaceIds:
+    - Human
+  statProfileMode: Base
+  statTemplate: Human
+  progressionOverlay: Human.Wizard
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - HumanClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+
+- type: riClass
+  id: Human.Sage
+  displayName: Sage
+  sourceClassName: Sage
+  allowedRaceIds:
+    - Human
+  statProfileMode: Replacement
+  statTemplate: Human.Sage
+  progressionOverlay: Human.Sage
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: Sage
+  legalStatus: NotAssessedPhase05
+  tags:
+    - HumanClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+
+- type: riClass
+  id: Alien.Fighter
+  displayName: Fighter
+  sourceClassName: Fighter
+  allowedRaceIds:
+    - Alien
+  statProfileMode: Replacement
+  statTemplate: Alien.Fighter
+  progressionOverlay: Alien.Fighter
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - AlienClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riClass
+  id: Alien.Healer
+  displayName: Healer
+  sourceClassName: Healer
+  allowedRaceIds:
+    - Alien
+  statProfileMode: Replacement
+  statTemplate: Alien.Healer
+  progressionOverlay: Alien.Healer
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - AlienClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riClass
+  id: Alien.Technologist
+  displayName: Technologist
+  sourceClassName: Technologist
+  allowedRaceIds:
+    - Alien
+  statProfileMode: Replacement
+  statTemplate: Alien.Technologist
+  progressionOverlay: Alien.Technologist
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - AlienClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riClass
+  id: Alien.Wizard
+  displayName: Wizard
+  sourceClassName: Wizard
+  allowedRaceIds:
+    - Alien
+  statProfileMode: Replacement
+  statTemplate: Alien.Wizard
+  progressionOverlay: Alien.Wizard
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - AlienClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+
+- type: riClass
+  id: Saiyan.Fighter
+  displayName: Fighter
+  sourceClassName: Fighter
+  allowedRaceIds:
+    - Saiyan
+  statProfileMode: Base
+  statTemplate: Saiyan
+  progressionOverlay: Saiyan.Fighter
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - SaiyanClass
+  audit:
+    status: NeedsSourceConfirmation
+    sourcePaths:
+      - Code/Races/Saiyan.dm
+      - Code/__core/race_stats.dm
+
+- type: riClass
+  id: Saiyan.Technologist
+  displayName: Technologist
+  sourceClassName: Technologist
+  allowedRaceIds:
+    - Saiyan
+  statProfileMode: Base
+  statTemplate: Saiyan
+  progressionOverlay: Saiyan.Technologist
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - SaiyanClass
+  audit:
+    status: NeedsSourceConfirmation
+    sourcePaths:
+      - Code/Races/Saiyan.dm
+      - Code/__core/race_stats.dm
+
+- type: riClass
+  id: Saiyan.Healer
+  displayName: Healer
+  sourceClassName: Healer
+  allowedRaceIds:
+    - Saiyan
+  statProfileMode: Base
+  statTemplate: Saiyan
+  progressionOverlay: Saiyan.Healer
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - SaiyanClass
+  audit:
+    status: NeedsSourceConfirmation
+    sourcePaths:
+      - Code/Races/Saiyan.dm
+      - Code/__core/race_stats.dm
+
+- type: riClass
+  id: Saiyan.Wizard
+  displayName: Wizard
+  sourceClassName: Wizard
+  allowedRaceIds:
+    - Saiyan
+  statProfileMode: Base
+  statTemplate: Saiyan
+  progressionOverlay: Saiyan.Wizard
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - SaiyanClass
+  audit:
+    status: NeedsSourceConfirmation
+    sourcePaths:
+      - Code/Races/Saiyan.dm
+      - Code/__core/race_stats.dm
+
+- type: riClass
+  id: Changeling.Fighter
+  displayName: Fighter
+  sourceClassName: Fighter
+  allowedRaceIds:
+    - Changeling
+  statProfileMode: Replacement
+  statTemplate: Changeling.Fighter
+  progressionOverlay: Changeling.Fighter
+  skillGrantIds: []
+  transformationPathIds: []
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - ChangelingClass
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Changeling.dm

@@ -1,0 +1,102 @@
+﻿- type: riRace
+  id: Human
+  displayName: Human
+  sourceRaceId: Human
+  defaultSpawnPlanet: Terra
+  defaultClass: Human.Fighter
+  allowedClasses:
+    - Human.Fighter
+    - Human.Technologist
+    - Human.Healer
+    - Human.Wizard
+    - Human.Sage
+  bodyTypePolicy: StandardHumanoid
+  statTemplate: Human
+  progressionProfile: Human
+  startingStatPoints: 60
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - Humanoid
+    - StandardBodyTypes
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Human.dm
+    notes: Current registry values; public-release rename review deferred.
+
+- type: riRace
+  id: Alien
+  displayName: Alien
+  sourceRaceId: Alien
+  defaultSpawnPlanet: Terra
+  defaultClass: Alien.Fighter
+  allowedClasses:
+    - Alien.Fighter
+    - Alien.Healer
+    - Alien.Technologist
+    - Alien.Wizard
+  bodyTypePolicy: StandardHumanoid
+  statTemplate: Alien.Fighter
+  progressionProfile: Alien
+  startingStatPoints: 70
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - Humanoid
+    - StandardBodyTypes
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Alien.dm
+    notes: Uses race-scoped classes because Alien class variants replace stat affinities.
+
+- type: riRace
+  id: Saiyan
+  displayName: Saiyan
+  sourceRaceId: Saiyan
+  defaultSpawnPlanet: Terra
+  defaultClass: Saiyan.Fighter
+  allowedClasses:
+    - Saiyan.Fighter
+    - Saiyan.Technologist
+    - Saiyan.Healer
+    - Saiyan.Wizard
+  bodyTypePolicy: StandardHumanoid
+  statTemplate: Saiyan
+  progressionProfile: Saiyan
+  startingStatPoints: 30
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - Humanoid
+    - StandardBodyTypes
+  audit:
+    status: NeedsSourceConfirmation
+    sourcePaths:
+      - Code/Races/Saiyan.dm
+      - Code/__core/race_stats.dm
+    notes: Included because Phase 08 requires Saiyan seed content. Verify numbers against the current registry before broader balancing.
+
+- type: riRace
+  id: Changeling
+  displayName: Changeling
+  sourceRaceId: Changeling
+  defaultSpawnPlanet: Terra
+  defaultClass: Changeling.Fighter
+  allowedClasses:
+    - Changeling.Fighter
+  bodyTypePolicy: FixedOrSpecial
+  statTemplate: Changeling.Fighter
+  progressionProfile: Changeling
+  startingStatPoints: 30
+  unlockRequirement: null
+  legalStatus: NotAssessedPhase05
+  tags:
+    - Humanoid
+    - ChangelingLike
+  audit:
+    status: PreserveOrderTuneNumbers
+    sourcePaths:
+      - Code/Races/Changeling.dm
+    notes: Included to prove Small/Large body exclusion behavior.

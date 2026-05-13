@@ -1,0 +1,48 @@
+﻿- type: riBodyType
+  id: Medium
+  displayName: Medium
+  statAffinityMultipliers: {}
+  excludedRaceTags: []
+  audit:
+    status: Preserve
+    sourcePaths:
+      - Code/statpointsystems.dm:ClassBodyStats
+    notes: Neutral default body type.
+
+- type: riBodyType
+  id: Small
+  displayName: Small
+  statAffinityMultipliers:
+    Strength: 0.5
+    Endurance: 0.5
+    Speed: 1.25
+    Resistance: 0.5
+    Force: 1.25
+    Offense: 1.5
+    Defense: 1.5
+  excludedRaceTags:
+    - ChangelingLike
+  audit:
+    status: Tune
+    sourcePaths:
+      - Code/statpointsystems.dm:ClassBodyStats
+    notes: Explicit Phase 08 seed. Does not recreate duplicate legacy Small body blocks.
+
+- type: riBodyType
+  id: Large
+  displayName: Large
+  statAffinityMultipliers:
+    Strength: 1.5
+    Endurance: 1.5
+    Speed: 0.7
+    Resistance: 1.5
+    Force: 0.7
+    Offense: 0.7
+    Defense: 0.7
+  excludedRaceTags:
+    - ChangelingLike
+  audit:
+    status: Tune
+    sourcePaths:
+      - Code/statpointsystems.dm:ClassBodyStats
+    notes: Explicit Phase 08 seed. Does not recreate duplicate legacy Large body blocks.

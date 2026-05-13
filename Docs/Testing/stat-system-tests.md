@@ -32,3 +32,43 @@ Use `Resources/Prototypes/RI/Character/phase08_seed.yml` as the initial fixture 
 - Dotted class IDs like `Human.Fighter` should be validated against Robust prototype ID conventions before finalizing.
 - `EnergyCapacity` should be documented in XML comments as legacy `EnergyMod`, not current Energy.
 - Tests must run without client UI code.
+
+# Stat system tests
+
+Phase 08 stat tests live in:
+
+```text
+Content.Tests/RI/Stats/RiStatSystemTests.cs
+```
+
+Run:
+
+```powershell
+dotnet test Content.Tests/Content.Tests.csproj
+```
+
+Covered cases:
+
+- Human + Medium body uses template values.
+- Human + Small body applies explicit multipliers.
+- Human + Large body applies explicit multipliers.
+- Changeling-like races reject Small/Large body types.
+- Alien class variants use replacement templates.
+- Formula order is deterministic.
+- Creation allocation is permanent additive state, not a hidden multiplier.
+
+Manual prototype-load smoke check:
+
+```powershell
+dotnet build
+dotnet run --project Content.Server
+```
+
+The server must start without prototype deserialization errors for:
+
+```text
+Resources/Prototypes/RI/Character/body_types.yml
+Resources/Prototypes/RI/Character/races.yml
+Resources/Prototypes/RI/Character/classes.yml
+Resources/Prototypes/RI/Character/stat_templates.yml
+```

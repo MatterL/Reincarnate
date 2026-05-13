@@ -497,3 +497,53 @@ public sealed record RiSavedCharacterStatsV0(
 ```
 
 Do not save temporary UI preview values or live Robust `EntityUid` values.
+
+## Phase 08 implemented formula order
+
+Phase 08 implements the first deterministic Ri stat calculation path.
+
+### Source split
+
+- `EnergyCapacity` is legacy `EnergyMod`; it is not current depletable `Energy`.
+- `Anger` in `RiStatType` is creation `AngerMax`; active battle anger remains a later runtime/status value.
+- `Intelligence` and `Enchantment` exist as stats but are not allocatable creation stats in this pass.
+- Race/class/body behavior is prototype-defined, not switch-defined in C#.
+
+### Prototype order
+
+1. Resolve race.
+2. Resolve class.
+3. Resolve body type.
+4. Validate class is allowed by race.
+5. Validate race is allowed by class.
+6. Validate body type is not excluded by race tags.
+7. Resolve class stat template.
+8. Apply stat template affinities.
+9. Apply body type affinity multipliers.
+10. Apply permanent creation allocations as `PermanentAddBonus`.
+11. Apply temporary buffs/status/equipment only through temporary modifier fields.
+
+### Final formula
+
+```text
+basePermanent = baseValue + earnedBonus + permanentAddBonus
+creationAdjusted = basePermanent * creationMultiplier
+currentFinal = (creationAdjusted + temporaryAddBonus) * temporaryMultiplier
+```
+
+### Body type contradiction resolution
+
+The duplicate Small/Large legacy blocks are not recreated as hidden C# conditionals. The Phase 08 body prototypes carry explicit seed multiplier values and are marked `Tune` until balance simulation locks them.
+
+### Class variant policy
+
+Race-scoped class IDs are required when class behavior differs by race:
+
+```text
+Human.Fighter
+Alien.Fighter
+Alien.Technologist
+Saiyan.Fighter
+```
+
+A class points to exactly one stat template. This prevents client UI, server validation, and tests from each having to understand nested replacement rules.
