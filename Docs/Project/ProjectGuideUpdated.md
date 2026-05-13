@@ -966,7 +966,7 @@ Docs/Design/character-creation-flow.md
 ## Expansion prompt
 
 ```text
-Expand Phase 09 into a RobustToolbox character creation vertical slice. Include shared messages, UI flow, server validation, stat preview, spawn handoff, error states, and tests.
+Expand Phase 09 into a RobustToolbox character creation vertical slice. Include shared messages, UI flow, server validation, stat preview, spawn handoff, and error states.
 ```
 
 ---
