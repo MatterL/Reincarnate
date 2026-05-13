@@ -850,7 +850,7 @@ Turn the Phase 05 stat bible into real C# prototypes, YAML, deterministic stat c
 5. Create first real YAML prototypes for:
    - Human;
    - Alien;
-   - Saiyan or a legally renamed equivalent;
+   - Saiyan;
    - Medium/Small/Large body types;
    - Fighter/Technologist/Healer/Wizard or renamed equivalents.
 6. Implement unit tests for:
