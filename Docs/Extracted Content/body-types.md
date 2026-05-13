@@ -1,21 +1,67 @@
-# Extracted Body Types
+# Body Types Extraction — Phase 05 Updated
 
-Source focus: `Code/Creation.dm`, `Code/statpointsystems.dm`.
+Status: updated by Phase 05 final stat bible pass.
 
-## Body type rotation
+## Body type vocabulary
 
-Creation cycles `Medium -> Large -> Small -> Medium`.
-
-## Extracted stat effects
-
-| Body type | Preserved design | Extracted modifier concept |
+| Body type | Design role | First implementation |
 |---|---|---|
-| Medium | Default body | No modifier. |
-| Small | Agile, physically weaker | For non-Changeling races: Strength x0.5, Endurance x0.5, Speed x1.25, Resistance x0.5, Force x1.25, Offense x1.5, Defense x1.5. |
-| Large | Strong/durable, slower | For non-Changeling races: Strength x1.5, Endurance x1.5, Speed x0.7, Resistance x1.5, Force x0.7, Offense x0.7, Defense x0.7. |
+| `Medium` | Default body profile | No multipliers. |
+| `Small` | Agile, weaker, higher precision/evasion | Explicit prototype multipliers. |
+| `Large` | Stronger/durable, slower, lower precision/evasion | Explicit prototype multipliers. |
 
-## Rewrite guidance
+## Duplicate-body-block contradiction
 
-- Implement body type as `RprBodyTypePrototype`, not as post-hoc multiplication in the character creation UI.
-- Keep the `raceExclusions` concept, because Changeling is exempt in the DM logic.
-- Phase 05 should test stat preview determinism for Human + Small/Medium/Large before adding rare races.
+`Code/statpointsystems.dm:ClassBodyStats()` contains duplicate `Small` and `Large` body checks. In raw active code, non-Changeling Small and Large bodies appear to receive both matching blocks, which compounds the modifier values.
+
+This is documented in `Docs/Generated Findings/phase05-body-modifier-audit.md`.
+
+Phase 05 resolution:
+
+- Do not recreate the duplicate-block behavior as hidden C# conditionals.
+- Use explicit `RiBodyTypePrototype.statAffinityMultipliers` values.
+- Keep the raw combined active-code values as balance audit data.
+- Mark body values `Tune` / `NeedsBalanceSim` until Phase 08 tests lock the chosen seed values.
+
+## Phase 08 seed body prototypes
+
+```yaml
+- type: riBodyType
+  id: Medium
+  displayName: Medium
+  statAffinityMultipliers: {}
+  audit:
+    status: Preserve
+
+- type: riBodyType
+  id: Small
+  displayName: Small
+  statAffinityMultipliers:
+    Strength: 0.5
+    Endurance: 0.5
+    Speed: 1.25
+    Resistance: 0.5
+    Force: 1.25
+    Offense: 1.5
+    Defense: 1.5
+  excludedRaceTags:
+    - ChangelingLike
+  audit:
+    status: Tune
+
+- type: riBodyType
+  id: Large
+  displayName: Large
+  statAffinityMultipliers:
+    Strength: 1.5
+    Endurance: 1.5
+    Speed: 0.7
+    Resistance: 1.5
+    Force: 0.7
+    Offense: 0.7
+    Defense: 0.7
+  excludedRaceTags:
+    - ChangelingLike
+  audit:
+    status: Tune
+```

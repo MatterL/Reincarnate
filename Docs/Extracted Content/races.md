@@ -1,62 +1,58 @@
-# Extracted Races and Spawn Planets
+# Races Extraction — Phase 05 Updated
 
-Source focus: `Code/Creation.dm`, `Code/statpointsystems.dm`, `Code/Stats.dm`, `Code/Variables.dm`, `Code/TransNew.dm`.
+Status: updated by Phase 05 final stat bible pass.
 
-## Creation-screen race availability
+## Phase 05 registry correction
 
-| Spawn area / planet | Race | Initial class | Notes |
-| --- | --- | --- | --- |
-| Earth | Human | default | base race |
-| Earth | Spirit Doll | default | base race |
-| Earth | Neko | Domestic | base race, class cycle has Schrodinger unlock |
-| Earth | Makyo | Fighter | base race |
-| Earth | Half Saiyan | Goten | unlock: Half Saiyan |
-| Earth | Quarter Saiyan | Fighter | unlock: Quarter Saiyan |
-| Earth | Popo | Fighter | unlock: Popo; high legal/content risk |
-| Earth | Nobody | Fighter | unlock: Nobody |
-| Earth | 1/16th Saiyan | Fighter | unlock: 1/16th Saiyan |
-| Earth | Throwback | Fighter | unlock: Throwback |
-| Namek | Namekian | Fighter | base race |
-| Vegeta | Saiyan | Normal | base race |
-| Vegeta | Tsufurujin | Fighter | base race |
-| Afterlife | Kaio | Fighter | base race |
-| Afterlife | Demi | Fighter | base race |
-| Afterlife | Demon | Pride | base race, sin class cycle |
-| Afterlife | Hollow | Fighter | unlock: Hollow |
-| Afterlife | Half Demon | Pride | unlock: Half Demon |
-| Afterlife | Majin | Fighter | unlock: Majin |
-| Afterlife | Dragon | Fighter | unlock: Dragon |
-| Afterlife | Makaioshin | Courage | unlock: Makaioshin |
-| Afterlife | God of Destruction | Fighter | unlock: God of Destruction |
-| Afterlife | Mazoku Demon | Fighter | unlock: Mazoku |
-| Arconia | Alien | Fighter | base race |
-| Arconia | Heran | Fighter | base race |
-| Arconia | Youkai | Kitsune | base race, Youkai class cycle |
-| Arconia | Lycan | Fighter | unlock: Lycan |
-| Arconia | Vampire | Fighter | unlock: Vampire |
-| Arconia | Aethirian | Fighter | unlock: Aethirian |
-| Arconia | Golem | Fighter | unlock: Golem |
-| Android Ship | Android | Fighter | base race |
-| Android Ship | Bio Android | Fighter | unlock: Bio |
-| Ice | Changeling | Frieza | base race |
+The current archive includes `Code/Races/*.dm` race definitions with `planet`, `default_class`, class definitions, race stat profiles, and stat point policies. These are the first candidate source for Phase 08 prototype generation.
 
-## Races with stat branches found in `statpointsystems.dm`
+`Creation.dm` remains necessary for creation flow, `RaceQualities()`, finalization grants, older fallback behavior, and save handoff, but it is no longer the preferred source for race stat profile numbers when a current registry profile exists.
 
-1/16th Saiyan, Aethirian, Alien, Android, Anti-Spiral, Bio Android, Changeling, Demi, Demon, Dragon, Galvan, God of Destruction, Golem, Half Demon, Half Saiyan, Heran, Hollow, Human, Kaio, Lycan, Majin, Makaioshin, Makyo, Mazoku Demon, Morphling, Namekian, Neko, Nobody, Pathfinder, Popo, Quarter Saiyan, Saiyan, Spirit Doll, Throwback, Trueseer, Tsufurujin, Vampire, Youkai
+Legal/public-release name risk is intentionally not assessed in this phase by user instruction. The `legalStatus` column is therefore `NotAssessedPhase05`.
 
-## Extraction notes
+## Race prototype fields
 
-- Creation uses numeric `Plan` and `Rac` counters to rotate through planets/races. Rewrite this as explicit `RprPlanetPrototype` + `RprRacePrototype` relations.
-- Unlocks are embedded as checks such as `CheckUnlock(...)`. Rewrite as server-authoritative unlock predicates.
-- Several names are franchise-derived or meme-heavy. Public-facing content requires rename/legal review before Phase 18.
-- Some races appear in stats/blurbs but are not clearly reachable through the active planet cycle, such as `Anti-Spiral`, `Pathfinder`, `Trueseer`, and `Great Old Admin`. Treat them as `Internal`, `Deprecated`, or `Legal Review` until confirmed.
+`sourceRaceId | publicNameCandidate | currentRegistryFile | defaultClass | statProfileId | progressionProfileId | startingStatPoints | legalStatus | formulaAuditStatus`
 
-## Target Robust data model
+## Current registry race matrix
 
-- `RprRacePrototype`: id, displayName, description, defaultSpawnPlanet, defaultClass, allowedClasses, bodyTypeRules, statTemplate, progressionMods, unlockRequirement, tags, legalStatus.
-- `RprRaceUnlockComponent` or account/character unlock record: owned unlock IDs.
-- `RprCharacterCreationSystem`: server validates race/class/body/spawn choices.
+|sourceRaceId|publicNameCandidate|currentRegistryFile|defaultClass|statProfileId|progressionProfileId|startingStatPoints|legalStatus|formulaAuditStatus|
+|---|---|---|---|---|---|---|---|---|
+|Aethirian|Aethirian|Code/Races/Aethirian.dm|Fighter|Aethirian|Aethirian|110|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Alien|Alien|Code/Races/Alien.dm|Fighter|Alien|Alien|70|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Android|Android|Code/Races/Android.dm|Juggernaut|Android|Android|25|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Anti-Spiral|Anti-Spiral|Code/Races/AntiSpiral.dm|Messenger|AntiSpiral|AntiSpiral|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Bio Android|Bio Android|Code/Races/BioAndroid.dm|Fighter|BioAndroid|BioAndroid|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Changeling|Changeling|Code/Races/Changeling.dm|Frieza|Changeling|Changeling|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Demi|Demi|Code/Races/Demi.dm|Fighter|Demi|Demi|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Demon|Demon|Code/Races/Demon.dm|Pride|Demon|Demon|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Dragon|Dragon|Code/Races/Dragon.dm|Fighter|Dragon|Dragon|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|God of Destruction|God of Destruction|Code/Races/GodOfDestruction.dm|Fighter|GodofDestruction|GodofDestruction|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Golem|Golem|Code/Races/Golem.dm|Fighter|Golem|Golem|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Half Demon|Half Demon|Code/Races/HalfDemon.dm|Wrath|HalfDemon|HalfDemon|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Half Saiyan|Half Saiyan|Code/Races/HalfSaiyan.dm|Gohan|HalfSaiyan|HalfSaiyan|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Heran|Heran|Code/Races/Heran.dm|Fighter|Heran|Heran|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Hollow|Hollow|Code/Races/Hollow.dm|Fighter|Hollow|Hollow|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Human|Human|Code/Races/Human.dm|Fighter|Human|Human|60|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Kaio|Kaio|Code/Races/Kaio.dm|Fighter|Kaio|Kaio|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Lycan|Lycan|Code/Races/Lycan.dm|Fighter|Lycan|Lycan|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Majin|Majin|Code/Races/Majin.dm|Fighter|Majin|Majin|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Makaioshin|Makaioshin|Code/Races/Makaioshin.dm|Courage|Makaioshin|Makaioshin|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Makyo|Makyo|Code/Races/Makyo.dm|Fighter|Makyo|Makyo|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Manakete|Manakete|Code/Races/Manakete.dm|Fighter|Manakete|Manakete|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Mazoku|Mazoku|Code/Races/Mazoku.dm|Pride|Mazoku|Mazoku|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Namekian|Namekian|Code/Races/Namekian.dm|Fighter|Namekian|Namekian|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Neko|Neko|Code/Races/Neko.dm|Fighter|Neko|Neko|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Saiyan|Saiyan|Code/Races/Saiyan.dm|Normal|Saiyan|Saiyan|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Spirit Doll|Spirit Doll|Code/Races/SpiritDoll.dm|Fighter|SpiritDoll|SpiritDoll|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Tsufurujin|Tsufurujin|Code/Races/Tsufurujin.dm|Fighter|Tsufurujin|Tsufurujin|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Vampire|Vampire|Code/Races/Vampire.dm|Fighter|Vampire|Vampire|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
+|Youkai|Youkai|Code/Races/Youkai.dm|Kitsune|Youkai|Youkai|30|NotAssessedPhase05|PreserveOrderTuneNumbers|
 
-## Immediate Phase 05 candidates
 
-Use a small public-safe sample first: Human, Alien, Namekian-equivalent-originalized, Android-equivalent-originalized. Do not start with the full race list.
+## Prototype policy
+
+- Use `RiRacePrototype` with stable IDs based on the current source race ID.
+- Keep `sourceRaceId` during migration for auditability.
+- Use race-scoped classes, such as `Human.Fighter`, `Alien.Technologist`, and `Android.Juggernaut`.
+- Do not implement `GenRaces` in Phase 08.

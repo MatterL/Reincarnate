@@ -1,0 +1,105 @@
+sourceFile,raceId,classId,startingStatPoints,statPointExponent,source,auditStatus,notes
+Code/Races/Aethirian.dm,Aethirian,*default*,110,0.062,SetDefaultStatPoints,NeedsBalanceSim,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Aethirian.dm,Aethirian,Aethirian.Fighter,110,0.062,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Alien.dm,Alien,*default*,70,0.062,SetDefaultStatPoints,NeedsBalanceSim,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Alien.dm,Alien,Alien.Fighter,120,0.062,SetClassStatPoints,NeedsBalanceSim,Class-specific override.
+Code/Races/Alien.dm,Alien,Alien.Healer,70,0.062,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Alien.dm,Alien,Alien.Technologist,70,0.062,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Alien.dm,Alien,Alien.Wizard,70,0.062,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Alien.dm,Alien,Alien.Spiritualist,70,0.062,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Alien.dm,Alien,Alien.BlueMage,70,0.062,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Android.dm,Android,*default*,25,0.124,SetDefaultStatPoints,PreserveOrderTuneNumbers,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Android.dm,Android,Android.Fighter,100,0.062,SetClassStatPoints,NeedsBalanceSim,Class-specific override.
+Code/Races/Android.dm,Android,Android.Juggernaut,25,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Android.dm,Android,Android.Hunter,25,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Android.dm,Android,Android.Engineer,25,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Android.dm,Android,Android.Slayer,25,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral.Messenger,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral.Scout,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral.Destroyer,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral.King,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/BioAndroid.dm,Bio Android,BioAndroid.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Changeling.dm,Changeling,Changeling.Frieza,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Changeling.dm,Changeling,Changeling.Cooler,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Changeling.dm,Changeling,Changeling.KingKold,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Changeling.dm,Changeling,Changeling.Chilled,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demi.dm,Demi,Demi.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demon.dm,Demon,*default*,30,0.124,SetDefaultStatPoints,PreserveOrderTuneNumbers,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Demon.dm,Demon,Demon.Hellfire,200,0.124,SetClassStatPoints,NeedsBalanceSim,Class-specific override.
+Code/Races/Demon.dm,Demon,Demon.Pride,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demon.dm,Demon,Demon.Sloth,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demon.dm,Demon,Demon.Lust,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demon.dm,Demon,Demon.Gluttony,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demon.dm,Demon,Demon.Wrath,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demon.dm,Demon,Demon.Greed,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Demon.dm,Demon,Demon.Envy,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Dragon.dm,Dragon,Dragon.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/GodOfDestruction.dm,God of Destruction,GodofDestruction.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/GodOfDestruction.dm,God of Destruction,GodofDestruction.Locked,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Golem.dm,Golem,Golem.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Wrath,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Pride,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Gluttony,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Sloth,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Lust,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Greed,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Envy,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan.Gohan,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan.Goten,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan.Trunks,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Heran.dm,Heran,Heran.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Heran.dm,Heran,Heran.Captain,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Hollow.dm,Hollow,*default*,30,0.124,SetDefaultStatPoints,PreserveOrderTuneNumbers,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Hollow.dm,Hollow,Hollow.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,*default*,60,0.124,SetDefaultStatPoints,NeedsBalanceSim,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Human.dm,Human,Human.Fighter,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Technologist,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Wizard,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Deus,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Dhampir,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Shifter,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Quincy,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Sage,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Frisk,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Human.dm,Human,Human.Chara,60,0.124,class_definition.stat_points,NeedsBalanceSim,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Kaio.dm,Kaio,Kaio.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Kaio.dm,Kaio,Kaio.Healer,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Kaio.dm,Kaio,Kaio.Wizard,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Lycan.dm,Lycan,*default*,30,0.124,SetDefaultStatPoints,PreserveOrderTuneNumbers,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Lycan.dm,Lycan,Lycan.UltimateLycan,120,0.124,SetClassStatPoints,NeedsBalanceSim,Class-specific override.
+Code/Races/Lycan.dm,Lycan,Lycan.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Majin.dm,Majin,Majin.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Makaioshin.dm,Makaioshin,*default*,30,0.124,SetDefaultStatPoints,PreserveOrderTuneNumbers,Using current Code/Races registry over legacy statpointsystems.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Bibarel,100,0.124,SetClassStatPoints,NeedsBalanceSim,Class-specific override.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Courage,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Power,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Wisdom,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Makyo.dm,Makyo,Makyo.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Makyo.dm,Makyo,Makyo.Wizard,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Manakete.dm,Manakete,Manakete.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Manakete.dm,Manakete,Manakete.Mage,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Mazoku.dm,Mazoku,Mazoku.Pride,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Namekian.dm,Namekian,Namekian.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Namekian.dm,Namekian,Namekian.Ancient,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Namekian.dm,Namekian,Namekian.Healer,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Neko.dm,Neko,Neko.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Neko.dm,Neko,Neko.Domestic,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Neko.dm,Neko,Neko.Schrodinger,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Normal,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.LowClass,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Elite,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Legendary,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Hellspawn,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.FireGod,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Savage,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.FallenAngel,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/SpiritDoll.dm,Spirit Doll,SpiritDoll.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/SpiritDoll.dm,Spirit Doll,SpiritDoll.Wizard,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Tsufurujin.dm,Tsufurujin,Tsufurujin.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Tsufurujin.dm,Tsufurujin,Tsufurujin.Technologist,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Vampire.dm,Vampire,Vampire.Fighter,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Vampire.dm,Vampire,Vampire.Volodarskii,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Youkai.dm,Youkai,Youkai.Kitsune,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Youkai.dm,Youkai,Youkai.Tanuki,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Youkai.dm,Youkai,Youkai.HellRaven,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.
+Code/Races/Youkai.dm,Youkai,Youkai.Fairy,30,0.124,class_definition.stat_points,PreserveOrderTuneNumbers,Class definition explicit points; verify against race_stat_profile.

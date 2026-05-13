@@ -1,0 +1,97 @@
+sourceFile,sourceRaceId,racePrototypeId,classId,sourceClassName,displayName,defaultClass,creationEnabled,unlockRequirement,statMode,statTemplate,statPoints,nextClasses,legalStatus,auditStatus
+Code/Races/Aethirian.dm,Aethirian,Aethirian,Aethirian.Fighter,Fighter,Fighter,yes,1,,Base,Aethirian,110,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Alien.dm,Alien,Alien,Alien.Fighter,Fighter,Fighter,yes,1,,Replacement,Alien.Fighter,120,Healer,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Alien.dm,Alien,Alien,Alien.Healer,Healer,Healer,,1,,Replacement,Alien.Healer,70,Technologist,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Alien.dm,Alien,Alien,Alien.Technologist,Technologist,Technologist,,1,,Replacement,Alien.Technologist,70,Wizard,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Alien.dm,Alien,Alien,Alien.Wizard,Wizard,Wizard,,1,,Replacement,Alien.Wizard,70,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Alien.dm,Alien,Alien,Alien.BlueMage,Blue Mage,Blue Mage,,0,,Replacement,Alien.BlueMage,70,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Alien.dm,Alien,Alien,Alien.Spiritualist,Spiritualist,Spiritualist,,0,,Replacement,Alien.Spiritualist,70,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Android.dm,Android,Android,Android.Juggernaut,Juggernaut,Juggernaut,yes,1,,Replacement,Android.Juggernaut,25,Hunter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Android.dm,Android,Android,Android.Hunter,Hunter,Hunter,,1,,Replacement,Android.Hunter,25,Engineer,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Android.dm,Android,Android,Android.Engineer,Engineer,Engineer,,1,,Replacement,Android.Engineer,25,Slayer,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Android.dm,Android,Android,Android.Slayer,Slayer,Slayer,,1,,Replacement,Android.Slayer,25,Fighter;Juggernaut,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Android.dm,Android,Android,Android.Fighter,Fighter,Fighter,,1,Old Model Wardroid,Replacement,Android.Fighter,100,Juggernaut,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral,AntiSpiral.Messenger,Messenger,Messenger,yes,1,,Base,Anti-Spiral,30,Scout,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral,AntiSpiral.Scout,Scout,Scout,,1,,Base,Anti-Spiral,30,Destroyer,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral,AntiSpiral.Destroyer,Destroyer,Destroyer,,1,,Base,Anti-Spiral,30,King,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral,AntiSpiral.King,King,King,,1,,Base,Anti-Spiral,30,Messenger,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/BioAndroid.dm,Bio Android,BioAndroid,BioAndroid.Fighter,Fighter,Fighter,yes,1,,Base,Bio Android,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Changeling.dm,Changeling,Changeling,Changeling.Frieza,Frieza,Frieza,yes,1,,Adjustment,Changeling.Frieza,30,Cooler,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Changeling.dm,Changeling,Changeling,Changeling.Cooler,Cooler,Cooler,,1,,Adjustment,Changeling.Cooler,30,King Kold;Frieza,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Changeling.dm,Changeling,Changeling,Changeling.KingKold,King Kold,King Kold,,1,King Kold,Adjustment,Changeling.KingKold,30,Chilled;Cooler,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Changeling.dm,Changeling,Changeling,Changeling.Chilled,Chilled,Chilled,,1,King Kold,Adjustment,Changeling.Chilled,30,Frieza,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demi.dm,Demi,Demi,Demi.Fighter,Fighter,Fighter,yes,1,,Base,Demi,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Pride,Pride,Pride,yes,1,,Replacement,Demon.Pride,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Envy,Envy,Envy,,0,,Replacement,Demon.Envy,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Gluttony,Gluttony,Gluttony,,0,,Replacement,Demon.Gluttony,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Greed,Greed,Greed,,0,,Replacement,Demon.Greed,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Hellfire,Hellfire,Hellfire,,0,,Replacement,Demon.Hellfire,200,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Lust,Lust,Lust,,0,,Replacement,Demon.Lust,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Sloth,Sloth,Sloth,,0,,Replacement,Demon.Sloth,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Demon.dm,Demon,Demon,Demon.Wrath,Wrath,Wrath,,0,,Replacement,Demon.Wrath,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Dragon.dm,Dragon,Dragon,Dragon.Fighter,Fighter,Fighter,yes,1,,Base,Dragon,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/GodOfDestruction.dm,God of Destruction,GodofDestruction,GodofDestruction.Fighter,Fighter,Fighter,yes,1,,Replacement,GodofDestruction.Fighter,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/GodOfDestruction.dm,God of Destruction,GodofDestruction,GodofDestruction.Locked,Locked,Locked,,0,,Replacement,GodofDestruction.Locked,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Golem.dm,Golem,Golem,Golem.Fighter,Fighter,Fighter,yes,1,,Base,Golem,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon,HalfDemon.Wrath,Wrath,Wrath,yes,1,,Replacement,HalfDemon.Wrath,30,Pride,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon,HalfDemon.Pride,Pride,Pride,,1,,Replacement,HalfDemon.Pride,30,Gluttony,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon,HalfDemon.Gluttony,Gluttony,Gluttony,,1,,Replacement,HalfDemon.Gluttony,30,Sloth,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon,HalfDemon.Sloth,Sloth,Sloth,,1,,Replacement,HalfDemon.Sloth,30,Lust,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon,HalfDemon.Lust,Lust,Lust,,1,,Replacement,HalfDemon.Lust,30,Greed,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon,HalfDemon.Greed,Greed,Greed,,1,,Replacement,HalfDemon.Greed,30,Envy,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon,HalfDemon.Envy,Envy,Envy,,1,,Replacement,HalfDemon.Envy,30,Wrath,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan,HalfSaiyan.Gohan,Gohan,Gohan,yes,1,Gohan,Replacement,HalfSaiyan.Gohan,30,Goten,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan,HalfSaiyan.Goten,Goten,Goten,,1,,Replacement,HalfSaiyan.Goten,30,Trunks,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan,HalfSaiyan.Trunks,Trunks,Trunks,,1,,Replacement,HalfSaiyan.Trunks,30,Gohan;Goten,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Heran.dm,Heran,Heran,Heran.Fighter,Fighter,Fighter,yes,1,,Replacement,Heran.Fighter,30,Captain;Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Heran.dm,Heran,Heran,Heran.Captain,Captain,Captain,,1,Captain,Replacement,Heran.Captain,30,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Hollow.dm,Hollow,Hollow,Hollow.Fighter,Fighter,Fighter,yes,1,,Base,Hollow,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Fighter,Fighter,Fighter,yes,1,,Base,Human,60,Technologist,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Technologist,Technologist,Technologist,,1,,Base,Human,60,Wizard,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Wizard,Wizard,Wizard,,1,,Base,Human,60,Deus;Dhampir;Shifter;Quincy;Sage;Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Deus,Deus,Deus,,1,Deus,Adjustment,Human.Deus,60,Dhampir;Shifter;Quincy;Sage;Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Dhampir,Dhampir,Dhampir,,1,Vampire,Adjustment,Human.Dhampir,60,Shifter;Quincy;Sage;Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Shifter,Shifter,Shifter,,1,Shifter,Base,Human,60,Quincy;Sage;Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Quincy,Quincy,Quincy,,1,Quincy,Replacement,Human.Quincy,60,Sage;Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Sage,Sage,Sage,,1,Sage,Replacement,Human.Sage,60,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Chara,Chara,Chara,,0,,Adjustment,Human.Chara,60,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Human.dm,Human,Human,Human.Frisk,Frisk,Frisk,,0,,Adjustment,Human.Frisk,60,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Kaio.dm,Kaio,Kaio,Kaio.Fighter,Fighter,Fighter,yes,1,,Base,Kaio,30,Healer,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Kaio.dm,Kaio,Kaio,Kaio.Healer,Healer,Healer,,1,,Base,Kaio,30,Wizard,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Kaio.dm,Kaio,Kaio,Kaio.Wizard,Wizard,Wizard,,1,,Base,Kaio,30,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Lycan.dm,Lycan,Lycan,Lycan.Fighter,Fighter,Fighter,yes,1,,Base,Lycan,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Lycan.dm,Lycan,Lycan,Lycan.UltimateLycan,Ultimate Lycan,Ultimate Lycan,,0,,Adjustment,Lycan.UltimateLycan,120,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Majin.dm,Majin,Majin,Majin.Fighter,Fighter,Fighter,yes,1,,Base,Majin,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin,Makaioshin.Courage,Courage,Courage,yes,1,,Replacement,Makaioshin.Courage,30,Power,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin,Makaioshin.Power,Power,Power,,1,,Replacement,Makaioshin.Power,30,Wisdom,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin,Makaioshin.Wisdom,Wisdom,Wisdom,,1,,Replacement,Makaioshin.Wisdom,30,Courage,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin,Makaioshin.Bibarel,Bibarel,Bibarel,,0,,Replacement,Makaioshin.Bibarel,100,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Makyo.dm,Makyo,Makyo,Makyo.Fighter,Fighter,Fighter,yes,1,,Base,Makyo,30,Wizard,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Makyo.dm,Makyo,Makyo,Makyo.Wizard,Wizard,Wizard,,1,,Base,Makyo,30,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Manakete.dm,Manakete,Manakete,Manakete.Fighter,Fighter,Fighter,yes,1,,Base,Manakete,30,Mage,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Manakete.dm,Manakete,Manakete,Manakete.Mage,Mage,Mage,,1,,Base,Manakete,30,Mage,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Mazoku.dm,Mazoku,Mazoku,Mazoku.Pride,Pride,Pride,yes,1,,Base,Mazoku,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Namekian.dm,Namekian,Namekian,Namekian.Fighter,Fighter,Fighter,yes,1,,Base,Namekian,30,Ancient;Healer,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Namekian.dm,Namekian,Namekian,Namekian.Ancient,Ancient,Ancient,,1,Ancient,Replacement,Namekian.Ancient,30,Healer,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Namekian.dm,Namekian,Namekian,Namekian.Healer,Healer,Healer,,1,,Base,Namekian,30,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Neko.dm,Neko,Neko,Neko.Fighter,Fighter,Fighter,yes,1,,Base,Neko,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Neko.dm,Neko,Neko,Neko.Domestic,Domestic,Domestic,,0,,Base,Neko,30,Schrodinger,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Neko.dm,Neko,Neko,Neko.Schrodinger,Schrodinger,Schrodinger,,0,Schrodinger,Base,Neko,30,Domestic,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.Normal,Normal,Normal,yes,1,,Replacement,Saiyan.Normal,30,Elite;Low-Class,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.LowClass,Low-Class,Low-Class,,1,,Replacement,Saiyan.LowClass,30,Normal,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.Elite,Elite,Elite,,1,Elite,Replacement,Saiyan.Elite,30,Legendary;Hellspawn;Fire God;Savage;Low-Class,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.Legendary,Legendary,Legendary,,1,Legendary,Replacement,Saiyan.Legendary,30,Hellspawn,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.Hellspawn,Hellspawn,Hellspawn,,1,Hellspawn,Replacement,Saiyan.Hellspawn,30,Fire God;Savage;Low-Class,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.FireGod,Fire God,Fire God,,1,Fire God,Replacement,Saiyan.FireGod,30,Savage,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.Savage,Savage,Savage,,1,Savage,Replacement,Saiyan.Savage,30,Low-Class,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Saiyan.dm,Saiyan,Saiyan,Saiyan.FallenAngel,Fallen Angel,Fallen Angel,,0,,Replacement,Saiyan.FallenAngel,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/SpiritDoll.dm,Spirit Doll,SpiritDoll,SpiritDoll.Fighter,Fighter,Fighter,yes,1,,Base,Spirit Doll,30,Wizard,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/SpiritDoll.dm,Spirit Doll,SpiritDoll,SpiritDoll.Wizard,Wizard,Wizard,,1,,Base,Spirit Doll,30,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Tsufurujin.dm,Tsufurujin,Tsufurujin,Tsufurujin.Fighter,Fighter,Fighter,yes,1,,Base,Tsufurujin,30,Technologist,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Tsufurujin.dm,Tsufurujin,Tsufurujin,Tsufurujin.Technologist,Technologist,Technologist,,1,,Base,Tsufurujin,30,Fighter,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Vampire.dm,Vampire,Vampire,Vampire.Fighter,Fighter,Fighter,yes,1,,Base,Vampire,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Vampire.dm,Vampire,Vampire,Vampire.Volodarskii,Volodarskii,Volodarskii,,0,Volodarskii,Base,Vampire,30,,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Youkai.dm,Youkai,Youkai,Youkai.Kitsune,Kitsune,Kitsune,yes,1,,Replacement,Youkai.Kitsune,30,Tanuki,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Youkai.dm,Youkai,Youkai,Youkai.Tanuki,Tanuki,Tanuki,,1,,Replacement,Youkai.Tanuki,30,Hell Raven;Kitsune,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Youkai.dm,Youkai,Youkai,Youkai.HellRaven,Hell Raven,Hell Raven,,1,Hell Raven,Replacement,Youkai.HellRaven,30,Kitsune,NotAssessedPhase05,PreserveOrderTuneNumbers
+Code/Races/Youkai.dm,Youkai,Youkai,Youkai.Fairy,Fairy,Fairy,,0,,Replacement,Youkai.Fairy,30,,NotAssessedPhase05,PreserveOrderTuneNumbers

@@ -1,0 +1,84 @@
+sourceFile,raceId,classId,mode,EnergyCapacity,Strength,Endurance,Speed,Force,Resistance,Offense,Defense,Regeneration,Recovery,Anger,statPoints,auditStatus,notes
+Code/Races/Aethirian.dm,Aethirian,*base*,Base,1,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.5,110,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Alien.dm,Alien,Alien.Fighter,ClassReplacement,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,0.4,120,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Alien.dm,Alien,Alien.Healer,ClassReplacement,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.3,0.4,70,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Alien.dm,Alien,Alien.Technologist,ClassReplacement,0.5,0.5,1.5,0.5,0.5,1.5,0.5,1.5,0.5,0.3,0.4,70,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Alien.dm,Alien,Alien.Wizard,ClassReplacement,2,0.75,0.75,0.25,0.25,0.25,0.25,0.25,0.5,1,0.5,70,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Alien.dm,Alien,Alien.Spiritualist,ClassReplacement,1.5,0.15,0.15,0.25,0.35,0.25,0.25,0.25,1,1,0.2,70,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Alien.dm,Alien,Alien.BlueMage,ClassReplacement,2,0.5,0.5,1,2,1.5,1,1,1.5,2.5,1,70,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Android.dm,Android,Android.Fighter,ClassReplacement,4,1.25,1.25,1,1.25,1.25,1.25,1.25,2,4,,100,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Android.dm,Android,Android.Juggernaut,ClassReplacement,1.5,2,4,0.5,-0.5,2,0.25,0.25,0.5,2,,25,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Android.dm,Android,Android.Hunter,ClassReplacement,1.5,2,0.5,1,2,0.5,1.5,1.5,0.5,1,,25,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Android.dm,Android,Android.Engineer,ClassReplacement,1.5,0,1.5,0.5,0.5,3,0.75,1,0.5,1,,25,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Android.dm,Android,Android.Slayer,ClassReplacement,1.5,1,0.5,2,0.5,0.5,2,0.5,0.5,1,,25,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/AntiSpiral.dm,Anti-Spiral,*base*,Base,2,3,7,3,9,7,4,4,1,0,0.01,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/AntiSpiral.dm,Anti-Spiral,AntiSpiral.FallenAngel,ClassAdjustment,0.5,0.6,0.1,0.3,,0.1,0.2,0.2,0.4,0.4,0.49,30,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/BioAndroid.dm,Bio Android,*base*,Base,4,3,2,1.5,2,2,2,3,4,3,0.75,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Changeling.dm,Changeling,*base*,Base,2,,,,,,,,2,0.5,0.15,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Changeling.dm,Changeling,Changeling.KingKold,ClassAdjustment,,1.75,4.5,0.5,0.75,4.5,0.25,0.25,,,,30,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Changeling.dm,Changeling,Changeling.Cooler,ClassAdjustment,,2.5,1.5,1,1,1.5,1,1,,,,30,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Changeling.dm,Changeling,Changeling.Frieza,ClassAdjustment,,2,0.25,3,2,0.25,1.25,1.25,,,,30,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Changeling.dm,Changeling,Changeling.Chilled,ClassAdjustment,,2.2,1.25,2,2,1,1.2,1.2,,,,30,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Demi.dm,Demi,*base*,Base,1,3,3,1,0.75,3,0.5,0.5,1,0.5,0.5,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Demon.dm,Demon,Demon.Pride,ClassReplacement,0.5,3,1.5,2,0.5,1.5,2.75,2.25,1,0,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Demon.dm,Demon,Demon.Sloth,ClassReplacement,0.5,1.5,3.75,0.25,1.5,3,1.75,1.75,1,0,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Demon.dm,Demon,Demon.Lust,ClassReplacement,1.5,1.25,1,2,3.5,1,2,2,1,2,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Demon.dm,Demon,Demon.Gluttony,ClassReplacement,0.5,1,3.8,1.5,1.25,3.5,1,1,1,0,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Demon.dm,Demon,Demon.Wrath,ClassReplacement,0.5,1.75,1.75,1,1.5,1.75,1.5,1.5,1,0,2,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Demon.dm,Demon,Demon.Greed,ClassReplacement,0.5,1,2.5,0.75,1,2.5,0.5,0.5,0.5,0,0.25,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Demon.dm,Demon,Demon.Envy,ClassReplacement,0.5,1,1.5,1,1.75,1.5,0.5,0.5,0.5,0,0.25,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Demon.dm,Demon,Demon.Hellfire,ClassReplacement,9,19,19,9,49,19,24,24,9,14,4,200,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Dragon.dm,Dragon,*base*,Base,2,1,2,1.2,1,2,1,1,2,2,1,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/GodOfDestruction.dm,God of Destruction,GodofDestruction.Fighter,ClassReplacement,2,6.75,2.5,3,5,2.5,4,4,4,1,0.01,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/GodOfDestruction.dm,God of Destruction,GodofDestruction.Locked,ClassReplacement,-0.7,-0.225,-0.65,-0.6,-0.4,-0.65,-0.5,-0.5,-0.5,-0.8,0.01,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Golem.dm,Golem,*base*,Base,1,3,2.5,0.5,1.5,2,1.5,1,-0.5,1,0.25,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Pride,ClassReplacement,1,2.5,2.5,1.25,1,1.5,2,1.5,0.75,0.75,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Sloth,ClassReplacement,1,1,1.75,2,3,1.75,1,1,0.75,0.75,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Lust,ClassReplacement,1,2,0.5,2,3.5,0.5,1.5,1.5,0.75,0.75,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Gluttony,ClassReplacement,1,2,4,0.75,0.75,4,1,0.75,1.5,0.75,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Wrath,ClassReplacement,1,1.25,1.25,1,1.5,1.25,0.75,0.75,0.75,0.5,2,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Greed,ClassReplacement,1,1.5,2.25,1.1,1.5,2.25,0.75,1.5,0.5,0.75,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfDemon.dm,Half Demon,HalfDemon.Envy,ClassReplacement,3,1.75,2.25,1.15,2.25,3.5,1,1,0.5,0.75,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan.Trunks,ClassReplacement,1,2,2,1.25,2,1.5,1.5,0.5,1,1.5,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan.Goten,ClassReplacement,1,1.75,1.5,1.75,1.5,2,1.75,2,1,1.5,0.75,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan.Gohan,ClassReplacement,1,1.5,1.5,1.5,1,1.5,2,2,1,1.5,1.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/HalfSaiyan.dm,Half Saiyan,HalfSaiyan.Quarter,ClassReplacement,0.8,0.75,1.5,2.25,0.6,1.25,1.5,1,0,1.3,1.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Heran.dm,Heran,Heran.Fighter,ClassReplacement,0.5,3,2.75,1,1.5,3,2.25,1.5,1,0.5,0.75,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Heran.dm,Heran,Heran.Captain,ClassReplacement,1,3.25,2.5,1,2,2.5,2.5,2,1,0.5,0.75,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Hollow.dm,Hollow,*base*,Base,1,1.25,1.25,0.5,1.25,1.25,1.25,1.25,1,0.25,0.5,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Human.dm,Human,*base*,Base,1.5,1,1,1,1,1,1,1,0.5,3,0.5,60,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Human.dm,Human,Human.Quincy,ClassReplacement,1.5,1.2,0.75,1.15,1.25,1.1,1,1,0.5,2,0.25,60,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Human.dm,Human,Human.Sage,ClassReplacement,1.75,1.5,1.25,1.2,1.2,1.2,1.3,1.3,0.75,2,0.25,60,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Human.dm,Human,Human.Dhampir,ClassAdjustment,,,-0.5,1,,1.25,-0.25,-0.25,,-1,,60,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Human.dm,Human,Human.Frisk,ClassAdjustment,2,1,1,1,1,1,1,1,0.5,3,0.5,60,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Human.dm,Human,Human.Chara,ClassAdjustment,2,1,1,1,1,1,1,1,0.5,3,0.5,60,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Human.dm,Human,Human.Deus,ClassAdjustment,2.5,0.5,1,1,0.5,1,1,0.5,1,1,0.5,60,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Kaio.dm,Kaio,*base*,Base,4,1.75,1.75,1,1.75,1.75,1.5,1.5,0,2,0.1,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Lycan.dm,Lycan,*base*,Base,1,2,2,1.5,0.5,2,2,1.5,1,0.5,1,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Lycan.dm,Lycan,Lycan.UltimateLycan,ClassAdjustment,4,4,4,4.5,2,2,2.5,2,4,2.5,2.5,120,Preserve,Adjustment applies after base race stat set; null fields mean no change.
+Code/Races/Majin.dm,Majin,*base*,Base,1.5,2,1.5,1.5,2.5,1.5,1.5,0.5,6,3,0.5,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Bibarel,ClassReplacement,4,4,4,2.5,40,4,9,9,9,14,10,100,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Wisdom,ClassReplacement,4,1.5,3,0.5,2,3,0.5,1,3,4,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Courage,ClassReplacement,1.5,3,3,1,3,3,3,3,3,2,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Makaioshin.dm,Makaioshin,Makaioshin.Power,ClassReplacement,0.5,4,2.5,1.5,3,2.5,2,1,3,0.5,2,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Makyo.dm,Makyo,*base*,Base,1.5,2,2,1.5,1,2,0.5,0.5,0.5,0.25,0.3,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Manakete.dm,Manakete,*base*,Base,1.5,0.5,2,2,1.5,1,1,1.5,2,1.5,1,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Mazoku.dm,Mazoku,*base*,Base,2,3,2.5,2,2.5,2,2.75,2.25,1,0,2,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Namekian.dm,Namekian,*base*,Base,2,3.5,2,1,2.2,2,2,1,4,1,0.25,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Namekian.dm,Namekian,Namekian.Ancient,ClassReplacement,4,2.25,3.5,1.25,2.25,2.75,1.25,2.25,4,4,1,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Neko.dm,Neko,*base*,Base,0,1,1,3,1,0.5,3,1,0.5,3,0.5,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Elite,ClassReplacement,0.5,3,1.5,1.5,2.5,1.5,1.75,1.75,1,1,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Savage,ClassReplacement,1.5,2,2,2,0.25,2.5,1.5,1,1.5,1,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Normal,ClassReplacement,0.5,2.5,2,1,2,2,1.7,1.7,1,1,0.75,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.LowClass,ClassReplacement,0.5,2,2,1.25,1,2,1.5,0.5,1,1,1,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Legendary,ClassReplacement,0.5,1.7,3,2,2.5,3,1.5,1.5,1,0.5,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.FireGod,ClassReplacement,0.5,2.5,2.5,1,2.5,2.5,0.25,0.25,1,1,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.Hellspawn,ClassReplacement,1,2,2,1.5,2,2,2,2,1,1,1,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Saiyan.dm,Saiyan,Saiyan.FallenAngel,ClassReplacement,0.9,0.11,0.9,0.75,0.85,0.7,0.85,0.85,0.75,0.6,1.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/SpiritDoll.dm,Spirit Doll,*base*,Base,2,0.75,0.5,2,2.5,1.5,1.25,1.25,0.5,2,0.25,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Tsufurujin.dm,Tsufurujin,*base*,Base,2,1.5,1.5,1.25,1.2,1.75,1,1.3,0.75,1.5,0.5,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Vampire.dm,Vampire,*base*,Base,1.5,2,1.5,2,2,1.5,2,2,1.5,1,1,30,PreserveOrderTuneNumbers,Current Code/Races registry base profile.
+Code/Races/Youkai.dm,Youkai,Youkai.Kitsune,ClassReplacement,2,0.5,1,2,2.5,2,1.5,1.5,0.5,2.5,0.5,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Youkai.dm,Youkai,Youkai.Tanuki,ClassReplacement,0.5,3.5,3.5,0.5,0,3.5,1.3,0.95,2,1,1,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Youkai.dm,Youkai,Youkai.HellRaven,ClassReplacement,2,3,1,2,2,1,1.5,1.5,2,1,1,30,Preserve,Replacement overrides base race stat set for this class.
+Code/Races/Youkai.dm,Youkai,Youkai.Fairy,ClassReplacement,4,-0.9,-0.9,4,3,2,6,6,1,1,0.25,30,Preserve,Replacement overrides base race stat set for this class.
