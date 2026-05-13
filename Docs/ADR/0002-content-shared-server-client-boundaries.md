@@ -1,81 +1,61 @@
-# ADR 0002 — Content.Shared / Content.Server / Content.Client Boundaries
+# ADR 0002: Content.Shared / Content.Server / Content.Client boundaries
 
 ## Status
-
 Accepted
 
 ## Context
-
-Reincarnate is a RobustToolbox multiplayer game. The original RoleplayRebirth BYOND code mixed player input, UI prompts, world state, combat state, persistence, and admin actions in ways that should not be copied directly.
-
-The rewrite needs clear boundaries so client code cannot become authoritative over progression, combat, saves, inventory, transformations, or admin actions.
+Reincarnate is a server-authoritative RobustToolbox rewrite of RoleplayRebirth. The original BYOND code mixes player input, UI prompts, world mutation, savefile access, combat rules, admin actions, and presentation inside the same runtime model. RobustToolbox gives us separate shared, server, and client projects. If those boundaries are not enforced early, later systems will recreate the same coupling that made the DM source hard to reason about.
 
 ## Decision
+Use the following boundary rules for all Reincarnate code:
 
-Use the following ownership model:
+### Content.Shared
+`Content.Shared.RI` owns code that must be visible to both server and client:
 
-### Content.Shared.RI
+- replicated/networked components;
+- shared enum and ID definitions;
+- network event DTOs;
+- prototype classes;
+- pure deterministic formulas;
+- prediction-safe validation helpers;
+- shared events that describe gameplay intent or state transitions.
 
-Shared code contains:
+Shared code must not reference `Content.Server` or `Content.Client`. Shared code must not read or write long-term saves. Shared code must not open UI windows or play client-only effects directly.
 
-- pure gameplay data structures;
-- networked components;
-- serializable events and DTOs;
-- prediction-safe calculations;
-- prototype definitions;
-- enums and stable IDs;
-- validation helpers that do not need server-only state.
+### Content.Server
+`Content.Server.RI` owns final authority:
 
-Shared code must not reference `Content.Server` or `Content.Client`.
-
-### Content.Server.RI
-
-Server code owns:
-
-- final gameplay validation;
-- saves and persistence;
-- progression;
-- damage;
+- persistence and save/load;
+- account/character ownership;
+- admin/moderation authority;
+- damage application;
 - resource spending;
-- character creation approval;
+- progression awards;
 - inventory ownership;
-- transformations and unlocks;
-- admin/moderation/logging authority;
-- anti-cheat and rate limits.
+- transformation unlocks;
+- skill unlocks;
+- economy;
+- anti-cheat checks;
+- rate limits;
+- final validation of all client requests.
 
-### Content.Client.RI
+The server may use shared formulas and shared DTOs, but it must not trust client-provided outcomes.
 
-Client code owns:
+### Content.Client
+`Content.Client.RI` owns presentation and input:
 
-- UI;
-- input collection;
-- local presentation;
+- UI windows;
+- HUDs;
+- local input collection;
 - cosmetic effects;
-- prediction-safe feedback.
+- sound and visual feedback;
+- prediction visuals that can be corrected by server state.
 
-Client code must not grant permanent outcomes.
+The client may request actions. It does not decide permanent outcomes.
 
 ## Consequences
-
-Positive:
-
-- New developers know where code belongs.
-- Network authority is easier to review.
-- Cheating risk is reduced.
-- Systems can be tested independently.
-
-Negative:
-
-- Some features require more upfront design.
-- Client UI must wait for server approval for real outcomes.
-- Shared code must stay clean of server-only dependencies.
-
-## Enforcement checklist
-
-Before merging a new feature:
-
-- Does it put final state changes on the server?
-- Are client-to-server messages treated as untrusted?
-- Are replicated fields in shared networked components?
-- Does shared code avoid server/client references?
-- Is persistence represented as explicit DTOs rather than live entity serialization?
+- Every client-to-server request needs server validation.
+- Most gameplay state that clients need to see should start as a shared networked component.
+- Saves and moderation logs stay server-only.
+- UI code may display predicted or replicated state, but it must not be the source of truth.
+- When unsure, put data contracts in shared code, authority in server code, and presentation in client code.

@@ -4,7 +4,7 @@ namespace Content.Shared.RI.Common;
 
 /// <summary>
 /// Stable stat identifiers used by formulas, prototypes, save data, and UI.
-/// Do not rename enum values after persistence depends on them.
+/// Do not rename or renumber enum values after persistence depends on them.
 /// </summary>
 [Serializable, NetSerializable]
 public enum RprStatType : byte

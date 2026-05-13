@@ -2,9 +2,7 @@
 
 ## Core rule
 
-The server owns final truth.
-
-The client may request actions, display UI, predict safe visuals, and show local feedback. The client does not decide permanent outcomes.
+The server owns final truth. The client may request actions, display UI, predict safe visuals, and show local feedback. The client does not decide permanent outcomes.
 
 ## Content.Shared
 
@@ -68,6 +66,4 @@ Every client-to-server message must answer:
 
 ## Component replication rule
 
-Replicated gameplay state should generally live in `Content.Shared` components marked for networking.
-
-Do not manually invent custom networking until the simple component-state path has been proven insufficient.
+Replicated gameplay state should generally live in `Content.Shared` components marked for networking. Do not manually invent custom networking until the simple component-state path has been proven insufficient.

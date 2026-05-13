@@ -1,79 +1,42 @@
-# ADR 0003 — Data-Driven Prototype-First Content Strategy
+# ADR 0003: Data-driven prototype strategy
 
 ## Status
-
 Accepted
 
 ## Context
+The original DM code stores many gameplay definitions directly in code: race properties, stat modifiers, skill behaviors, transformation requirements, item data, spawn choices, admin permissions, and world settings. Reincarnate needs those concepts to be inspectable, testable, and tunable without burying every value in C#.
 
-RoleplayRebirth contains many races, classes, body types, skills, transformations, items, planets, and admin/content rules. Directly translating those into hardcoded C# would recreate the same maintenance problems as the old DM code.
+RobustToolbox already supports prototype-driven content. Reincarnate should use prototypes for stable data definitions and C# systems for behavior.
 
 ## Decision
+Use YAML prototypes under `Resources/Prototypes/RI` for tunable content and shared prototype classes under `Content.Shared/RI/Prototypes` for schema definitions.
 
-Use prototypes for tunable content whenever possible.
-
-Prototype-first content includes:
+Prototype data should cover:
 
 - races;
-- classes;
+- classes/archetypes;
 - body types;
 - stat templates;
 - skills;
-- skill categories;
+- projectiles;
+- damage categories only when they outgrow enums;
 - transformations;
-- items;
-- equipment;
-- recipes;
-- enchantments;
-- planets;
-- spawn points;
-- admin roles;
-- permissions.
+- items/equipment;
+- planets/spawn points;
+- admin roles/permissions.
 
-C# systems should implement reusable behavior. YAML prototypes should hold data.
+C# systems should own behavior. Prototypes describe what exists and the values attached to it. Prototypes should not become scripts.
 
 ## Rules
-
-- Do not create one-off C# classes for every skill.
-- Do not hardcode race/class/body multipliers in systems.
-- Do not copy DM control flow into C#.
-- Do not put balance numbers directly into systems unless they are true constants.
-- Tag formulas with audit status: Preserve, Tune, Rewrite, Delete, LegalReview, NeedsBalanceSim, or NeedsNetworkPrototype.
+- Put YAML under `Resources/Prototypes/RI/<Domain>/`.
+- Put prototype classes under `Content.Shared/RI/Prototypes/` unless a later domain-specific split is justified.
+- Use stable IDs. Once save data or external docs reference an ID, do not rename it casually.
+- Prefer explicit fields over arbitrary dictionaries until the data shape truly needs extension points.
+- Every value copied or derived from DM extraction should carry an audit status in docs or metadata: Preserve, Tune, Rewrite, Delete, Legal Review, Needs Balance Sim, or Needs Network Prototype.
+- Do not copy raw DM source into YAML comments.
 
 ## Consequences
-
-Positive:
-
-- Bulk content migration becomes repeatable.
-- Balance patches require less code churn.
-- Tests can load representative prototype sets.
-- Legal/name review can happen at the data layer.
-
-Negative:
-
-- Early schema design takes extra time.
-- Some complex skills will still require named handlers.
-- Bad prototype schema choices may need migration later.
-
-## Example
-
-Good:
-
-```yaml
-- type: rprRace
-  id: Human
-  displayName: Human
-  statMods:
-    strength: 1.0
-    endurance: 1.0
-```
-
-Bad:
-
-```yaml
-if (race == "Human")
-{
-    strength *= 1.0f;
-    endurance *= 1.0f;
-}
-```
+- Designers can tune content without touching authority systems.
+- Systems can be tested against small prototype fixtures.
+- Later content migration tools can generate prototype drafts.
+- Prototype IDs become part of the save/network/content contract and must be treated as stable.

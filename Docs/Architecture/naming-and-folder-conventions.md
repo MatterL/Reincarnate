@@ -25,9 +25,9 @@ Examples:
 
 | Location | Namespace pattern |
 |---|---|
-| Shared code | `Content.Shared.RI.<System>` |
-| Server code | `Content.Server.RI.<System>` |
-| Client code | `Content.Client.RI.<System>` |
+| Shared code | `Content.Shared.RI.<Domain>` |
+| Server code | `Content.Server.RI.<Domain>` |
+| Client code | `Content.Client.RI.<Domain>` |
 | Shared common enums | `Content.Shared.RI.Common` |
 | Shared prototypes | `Content.Shared.RI.Prototypes` |
 | Server persistence | `Content.Server.RI.Persistence` |
@@ -45,7 +45,7 @@ Examples:
 
 ## System grouping rules
 
-Group by gameplay system first:
+Group by gameplay system first.
 
 Good:
 
