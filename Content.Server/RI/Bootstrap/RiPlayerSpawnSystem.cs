@@ -50,9 +50,9 @@ public sealed partial class RiPlayerSpawnSystem : EntitySystem
 
     private void OnPlayerStatusChanged(object? sender, SessionStatusEventArgs args)
     {
-        // Connected is the safe first trigger for this template. InGame is kept here
-        // for compatibility if the local connection flow later calls JoinGame.
-        if (args.NewStatus != SessionStatus.Connected && args.NewStatus != SessionStatus.InGame)
+        // The template connection flow first reaches Connected. We spawn and then explicitly
+        // move the session into InGame after attaching a pawn.
+        if (args.NewStatus != SessionStatus.Connected)
             return;
 
         SpawnForSession(args.Session);
@@ -62,7 +62,8 @@ public sealed partial class RiPlayerSpawnSystem : EntitySystem
     {
         if (session.AttachedEntity is { Valid: true } existing)
         {
-            _sawmill.Info($"Session {session.Name} already attached to {existing}; skipping Phase 07 spawn.");
+            _sawmill.Info($"Session {session.Name} already attached to {existing}; joining game.");
+            _playerManager.JoinGame(session);
             return;
         }
 
@@ -70,6 +71,7 @@ public sealed partial class RiPlayerSpawnSystem : EntitySystem
         var pawn = Spawn(PlayerPrototype, spawnCoordinates);
 
         _playerManager.SetAttachedEntity(session, pawn, force: true);
+        _playerManager.JoinGame(session);
 
         _sawmill.Info($"Spawned {PlayerPrototype} entity {pawn} for session {session.Name} at {spawnCoordinates}.");
     }
@@ -82,15 +84,16 @@ public sealed partial class RiPlayerSpawnSystem : EntitySystem
         // Phase 07 temporary map bootstrap.
         // IMapManager map creation is obsolete in current Robust, but this is isolated
         // here so Phase 18 can replace it with the real map/grid loading path.
+#pragma warning disable CS0618
         var mapId = _mapManager.CreateMap();
         var mapEntity = _mapManager.GetMapEntityId(mapId);
+#pragma warning restore CS0618
 
         _testMapId = mapId;
         _testMapEntity = mapEntity;
 
         _sawmill.Info($"Created RI Phase 07 test map {mapId} / entity {mapEntity}.");
 
-        // Spawn a visible 9x9 carpet of placeholder sprites so the camera is not looking at emptiness.
         for (var x = -4; x <= 4; x++)
         {
             for (var y = -4; y <= 4; y++)

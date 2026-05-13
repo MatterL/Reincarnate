@@ -2,6 +2,7 @@
 using System.Numerics;
 using Content.Shared.RI.Movement;
 using Robust.Client.Input;
+using Robust.Client.Player;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Input;
 using Robust.Shared.IoC;
@@ -10,34 +11,28 @@ namespace Content.Client.RI.Input;
 
 /// <summary>
 /// Phase 07 client input bridge.
-/// Reads the existing engine MoveUp/MoveDown/MoveLeft/MoveRight binds and sends
-/// movement intent to the server.
+/// Sends movement intent only when the local player has a pawn and input changes.
 /// </summary>
 public sealed partial class RiInputSystem : EntitySystem
 {
     [Dependency] private readonly IInputManager _input = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
 
     private Vector2 _lastDirection = Vector2.Zero;
-    private float _sendAccumulator;
-
-    private const float SendInterval = 1.0f / 20.0f;
 
     public override void FrameUpdate(float frameTime)
     {
         base.FrameUpdate(frameTime);
 
-        _sendAccumulator += frameTime;
+        if (_playerManager.LocalEntity is not { Valid: true })
+            return;
 
         var direction = GetMovementDirection();
-        var unchanged = Vector2.DistanceSquared(direction, _lastDirection) < 0.0001f;
 
-        // Send immediately on changes, and also resend at a low rate while held.
-        if (unchanged && _sendAccumulator < SendInterval)
+        if (Vector2.DistanceSquared(direction, _lastDirection) < 0.0001f)
             return;
 
         _lastDirection = direction;
-        _sendAccumulator = 0.0f;
-
         RaiseNetworkEvent(new RiMoveInputEvent(direction));
     }
 
