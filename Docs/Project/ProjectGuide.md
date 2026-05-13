@@ -659,14 +659,14 @@ Convert the most valuable part of RPR — race/class/body/stat identity — into
 
 ## Deliverables
 
-- `Content.Shared/RPR/Stats/RprStatType.cs`
-- `Content.Shared/RPR/Stats/RprStatSystem.cs`
-- `Content.Shared/RPR/Prototypes/RprRacePrototype.cs`
-- `Content.Shared/RPR/Prototypes/RprClassPrototype.cs`
-- `Content.Shared/RPR/Prototypes/RprBodyTypePrototype.cs`
-- `Resources/Prototypes/RPR/Character/races.yml`
-- `Resources/Prototypes/RPR/Character/classes.yml`
-- `Resources/Prototypes/RPR/Character/body_types.yml`
+- `Content.Shared/RI/Stats/RprStatType.cs`
+- `Content.Shared/RI/Stats/RprStatSystem.cs`
+- `Content.Shared/RI/Prototypes/RprRacePrototype.cs`
+- `Content.Shared/RI/Prototypes/RprClassPrototype.cs`
+- `Content.Shared/RI/Prototypes/RprBodyTypePrototype.cs`
+- `Resources/Prototypes/RI/Character/races.yml`
+- `Resources/Prototypes/RI/Character/classes.yml`
+- `Resources/Prototypes/RI/Character/body_types.yml`
 - `Docs/Design/stat-bible.md`
 - Stat calculation tests.
 
