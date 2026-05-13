@@ -1,0 +1,12 @@
+﻿- type: entity
+  id: RiPlayerPawn
+  name: RI test player pawn
+  description: Temporary Phase 07 player pawn. Replace after character creation exists.
+  components:
+    - type: RiPlayer
+      debugName: "RI Test Player"
+    - type: RiBasicMovement
+      walkSpeed: 4.0
+    - type: Sprite
+      texture: /Textures/noSprite.png
+    - type: Eye

@@ -1,0 +1,25 @@
+﻿- type: entity
+  id: RiDebugSpawnMarker
+  name: RI debug spawn marker
+  description: Temporary marker for the Phase 07 spawn point.
+  components:
+    - type: RiDebugSpawn
+      spawnId: "ri-test-spawn"
+    - type: Sprite
+      texture: /Textures/noSprite.png
+
+- type: entity
+  id: RiDebugFloorMarker
+  name: RI debug floor marker
+  description: Temporary marker used to make the generated test surface visible.
+  components:
+    - type: Sprite
+      texture: /Textures/noSprite.png
+
+- type: entity
+  id: RiDebugWallMarker
+  name: RI debug wall marker
+  description: Temporary visible marker used as a fake wall/boundary in the Phase 07 surface.
+  components:
+    - type: Sprite
+      texture: /Textures/noSprite.png
